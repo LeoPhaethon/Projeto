@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vagas | TechHelper</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background: #f9f9f9;
+    }
+    h1, h2 {
+      color: #003366;
+    }
+    .vaga {
+      background: white;
+      border: 1px solid #ccc;
+      padding: 15px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+    form {
+      margin-top: 30px;
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+    }
+    input, select, textarea {
+      width: 100%;
+      margin-top: 10px;
+      margin-bottom: 15px;
+      padding: 8px;
+      border-radius: 6px;
+      border: 1px solid #aaa;
+    }
+    button {
+      padding: 10px 20px;
+      background: #003366;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>Vagas em Aberto</h1>
+
+  <div class="vaga">
+    <h2>Estágio em Suporte Técnico</h2>
+    <p><strong>Requisitos:</strong> Cursando técnico ou superior em TI, conhecimento básico em redes e atendimento.</p>
+    <p><strong>Local:</strong> Híbrido - São Paulo/SP</p>
+  </div>
+
+  <div class="vaga">
+    <h2>Jovem Aprendiz - Área Administrativa</h2>
+    <p><strong>Requisitos:</strong> Ensino médio cursando ou completo, boa comunicação, interesse por tecnologia.</p>
+    <p><strong>Local:</strong> Presencial - Campinas/SP</p>
+  </div>
+
+  <div class="vaga">
+    <h2>Primeiro Emprego - Técnico de Informática</h2>
+    <p><strong>Requisitos:</strong> Curso técnico completo, conhecimento em montagem e manutenção de computadores.</p>
+    <p><strong>Local:</strong> Presencial - Belo Horizonte/MG</p>
+  </div>
+
+  <form action="enviarCandidatura" method="post">
+    <h2>Candidatar-se a uma Vaga</h2>
+    <label for="nome">Nome Completo:</label>
+    <input type="text" id="nome" name="nome" required>
+
+    <label for="email">E-mail:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="vaga">Vaga de Interesse:</label>
+    <select id="vaga" name="vaga">
+      <option value="Estágio">Estágio em Suporte Técnico</option>
+      <option value="Aprendiz">Jovem Aprendiz - Área Administrativa</option>
+      <option value="Tecnico">Primeiro Emprego - Técnico de Informática</option>
+    </select>
+
+    <label for="mensagem">Fale um pouco sobre você:</label>
+    <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+
+    <button type="submit">Enviar Candidatura</button>
+  </form>
+</body>
+</html>
